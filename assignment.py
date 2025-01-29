@@ -7,7 +7,7 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    return f"My name is {name} and I am {age} years old."
+    return f"My name is {name} and I am {age} year old"
 
 def conditional_check(number):
     """
@@ -45,12 +45,10 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    if numbers > 10:
-        return "Greater"
-    if numbers < 10:
-        return "Lesser"
-    if numbers == 10:
-        return "Equal"
+    if not numbers:  # Check if the list is empty
+        return (0, None, None)  # Return default values for an empty list
+
+    return (sum(numbers), max(numbers), min(numbers))
 
 def dict_operations(students_dict):
     """
